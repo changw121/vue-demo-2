@@ -1,16 +1,25 @@
 <template>
-  <textarea v-model="message" placeholder="edit me"/>
-  <p>Message is: {{ message }}</p>
-  <p><button @click="message = 'changw'">set message to changw</button></p>
+  <!--label将input包住，点击label就相当于点击input-->
+  水果：{{x}}
+  <label for="checkbox">
+    <input type="checkbox" v-model="x" :value="1">
+    <span>苹果</span>
+  </label>
+  <label for="checkbox">
+    <input type="checkbox" v-model="x" :value="2">
+    <span>番茄</span>
+  </label>
+  <label for="checkbox">
+    <input type="checkbox" v-model="x" :value="3">
+    <span>菠萝蜜</span>
+  </label>
 </template>
-
 <script>
-
 export default {
   name: 'App',
   data() {
-    return{
-      message: 'hi'
+    return {
+      x: []
     }
   },
   components: {}
